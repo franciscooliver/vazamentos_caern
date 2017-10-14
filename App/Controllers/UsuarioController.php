@@ -51,7 +51,8 @@
             echo "URL :".$url;
             echo "  USUARIO= ".$usuarioFace;
             print_r( $usuario_profile);
-            $this->render("usuario/Login");
+            $this->renderLoginFacebook("usuario/Login",$usuarioface,$url)
+           // $this->render("usuario/Login");
         }
 
         public function validaLogin(){
