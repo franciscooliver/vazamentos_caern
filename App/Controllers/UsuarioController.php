@@ -1,7 +1,11 @@
 <?php
     namespace App\Controllers;
+    
     use App\Models\usuarioDAO;
     use App\Models\Entidades\Usuario;
+    use App\Lib\src\facebook;
+  
+
     session_start();
 
     class UsuarioController extends Controller
@@ -15,8 +19,41 @@
         }
 
         public function Login(){
+          
+            $url = '';
+            
+
+            $face = new Facebook(array(
+                'appId' => '131535117502383',
+                'secret'=> '274a481b140984793a353262b64d95ef'
+            ));
+
+            //pegar o usuario
+            $usuarioFace = $face->getUser();
+
+            if($usuarioFace){
+                try{
+                    //pegando o profile
+                    $usuario_profile = $face->api("/me");
+
+
+                }catch(FacebookApiException $erro){
+                    $usuario = null;
+                    throw new Exception($erro.getMessage()."Página não encontrada. ",700);
+                }
+
+            }else{
+                //pegar a url para login
+                $url = $face->getLoginUrl(array('scope','email'));
+
+            }
+            //teste
+            echo "URL :".$url;
+            echo "  USUARIO= ".$usuarioFace;
+            print_r( $usuario_profile);
             $this->render("usuario/Login");
         }
+
         public function validaLogin(){
             
             $emailt = $_POST['email_log'];
@@ -101,6 +138,16 @@
            }
         }
         
+        public function logoutFacebook() {
+            $face = new Facebook(array(
+                'appId' => '131535117502383',
+                'secret'=> '274a481b140984793a353262b64d95ef'
+            ));
+            $face->destroySession();
+          
+            $this->redirect("vazamento");
+            
+        }
         public function logout() {
             
             unset($_SESSION["nome_usuario"]);

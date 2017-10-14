@@ -29,7 +29,8 @@
                 <a class="nav-link" href="http://<?php echo APP_HOST; ?>usuario/cadastro">Cadastro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://<?php echo APP_HOST; ?>usuario/logout">Logout</a>
+                <!--<a class="nav-link" href="http://<?php echo APP_HOST; ?>usuario/logout">Logout</a>-->
+                <a class="nav-link" href="http://<?php echo APP_HOST; ?>usuario/logoutFacebook">Logout</a>
             </li>
         </ul>
     
