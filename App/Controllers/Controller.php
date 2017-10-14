@@ -40,7 +40,9 @@
         public function renderLoginFacebook($view,$usuarioface,$url){
             
              $usuarioface = $usuarioface;
-             $url = $url;
+             $urlFace= $url;
+             echo "Usuario :".$usuarioface." / ";
+             echo "URL :".$url;
            
            
             require_once PATH.'/App/Views/layouts/header.php';

@@ -44,7 +44,7 @@
 -->
 
 <div class="container" style="margin-top: 10px">
-    <a href="<?=$url?>">Efetuar login com Facebook</a>
+    <a href="<?= $urlFace ?>">Efetuar login com Facebook</a>
           <div class="row">
           <div class="col-md-3"></div>
           <div class="col-md-6">

@@ -48,10 +48,10 @@
 
             }
             //teste
-            echo "URL :".$url;
-            echo "  USUARIO= ".$usuarioFace;
-            print_r( $usuario_profile);
-            $this->renderLoginFacebook("usuario/Login",$usuarioface,$url)
+            //echo "URL :".$url;
+          //  echo "  USUARIO= ".$usuarioFace;
+           // print_r( $usuario_profile);
+            $this->renderLoginFacebook("usuario/Login",$usuarioface,$url);
            // $this->render("usuario/Login");
         }
 
