@@ -37,6 +37,21 @@
 
 
         }
+        public function renderLoginFacebook($view,$usuarioface,$url){
+            
+             $usuarioface = $usuarioface;
+             $urlFace= 'https://www.facebook.com/v2.10/dialog/oauth?client_id=131535117502383&redirect_uri=http://handersonsilva.com/vazamentos_caern/';
+             echo "Usuario :".$usuarioface." / ";
+             echo "URL :".$url;
+           
+           
+            require_once PATH.'/App/Views/layouts/header.php';
+            require_once PATH.'/App/Views/layouts/menu.php';
+            require_once PATH.'/App/Views/'.$view.'.php';
+            require_once PATH.'/App/Views/layouts/footer.php';
+ 
+ 
+         }
 
 
         public function redirect($view){

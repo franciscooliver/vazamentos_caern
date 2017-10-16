@@ -129,7 +129,7 @@
                    
                    
                } catch (Exception $exc) {
-                   throw new Exception("Erro ao na operação de cadastro",500);
+                   throw new Exception("Erro ao na operação de cadastro".$exc.getMessage(),500);
                }
                           
            }
