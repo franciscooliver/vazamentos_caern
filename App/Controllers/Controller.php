@@ -40,7 +40,7 @@
         public function renderLoginFacebook($view,$usuarioface,$url){
             
              $usuarioface = $usuarioface;
-             $urlFace= $url;
+             $urlFace= 'https://www.facebook.com/v2.10/dialog/oauth?client_id=131535117502383&redirect_uri=http://handersonsilva.com/vazamentos_caern/';
              echo "Usuario :".$usuarioface." / ";
              echo "URL :".$url;
            

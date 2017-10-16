@@ -25,8 +25,10 @@
 
             $face = new Facebook(array(
                 'appId' => '131535117502383',
-                'secret'=> '274a481b140984793a353262b64d95ef'
+                'secret'=> '274a481b140984793a353262b64d95ef',
+                
             ));
+            //$face->login();
 
             //pegar o usuario
             $usuarioFace = $face->getUser();
